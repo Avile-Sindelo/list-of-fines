@@ -1,0 +1,23 @@
+   
+    <table>
+        <thead>
+            <tr>
+                <th>Offence Code</th>
+                <th>Legislation</th>
+                <th>Title</th>
+                <th>Short description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each titleFines}}
+               <tr>
+                    <td>{{offence_code}}</td>
+                    <td>{{legislation}}</td>
+                    <td>{{title}} : {{sub_title}}</td>
+                    <td>{{short_description}}</td>
+                    <td>{{amount}}</td>
+               </tr>
+            {{/each}}
+        </tbody>
+    </table>

@@ -1,1 +1,44 @@
-<h2> This is the Home Page of the List of fines application</h2>
+<div class="container">
+    <form action="/specificFines" method="POST">
+        <select>
+            <option disabled="true"> Choose a title</option>
+            {{#each fines}}
+                <option value={{title}}> {{title}} </option>
+            {{/each}}
+        </select>
+    
+        <button type="submit">Search</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Charge Code</th>
+                <th>Legislation</th>
+                <th>Charge wording</th>
+                <th>Classification of offence, infringement</th>
+                <th>Penalty units</th>
+                <th>Demerit points</th>
+                <th>Penalty in Rand value</th>
+                <th>Penalty minus discount in Rand value</th>
+                <th>Operator charge/Jusristic person who is not an operator charge </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each fines}}
+               <tr>
+                    <td>{{charge_code}}</td>
+                    <td>{{legislation}}</td>
+                    <td>{{charge_wording}}</td>
+                    <td>{{offence_or_infringement}}</td>
+                    <td>{{penalty_units}}</td>
+                    <td>{{demerit_points}}</td>
+                    <td>{{amount}}</td>
+                    <td>{{discounted_amount}}</td>
+                    <td>{{operator_charge}}</td>
+               </tr>
+            {{/each}}
+        </tbody>
+    </table>
+ 
+</div>

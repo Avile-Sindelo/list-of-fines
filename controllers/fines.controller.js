@@ -7,9 +7,17 @@ async function allFines(req, res){
     res.render('home', { fines })
 }
 
-async function specificFine(title) {
-    // get the fines for a specific title
+async function specificFine(req, res) {
+    // extract the title from the request body
+    const { title } = req.body;
+    console.log(req.body);
+
+    //get the fines for th specified title from the database
+    const titleFines = await FinesModel.getSpecificFines(title);
+    // console.log(titleFines);
+    
     //render a view - home page
+    res.render('title-fines', { titleFines })    
 }
 
 
