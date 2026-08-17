@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', Fines.allFines); // still to import the necessary controller-module
-app.post('/specificFines', Fines.specificFine); // still to import the necessary controller-module
+app.post('/specificFines', Fines.specificFine); 
 
 
 const PORT = process.env.PORT || 3000;
