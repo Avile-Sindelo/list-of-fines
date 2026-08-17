@@ -8,5 +8,6 @@ CREATE TABLE fines (
   demerit_points INT NOT NULL,
   amount NUMERIC(10,2) NOT NULL,
   discounted_amount NUMERIC(10, 2),
-  operator_charge INT
+  operator_charge INT,
+  key_word VARCHAR(255)
 );  
