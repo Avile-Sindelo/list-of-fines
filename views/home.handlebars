@@ -1,9 +1,9 @@
 <div class="container">
-    <form action="/specificFines" method="POST">
-        <select>
+    <form action="/filtered" method="POST">
+        <select name="option">
             <option disabled selected> Choose a title</option>
             {{#each keywords}}
-                <option value={{this}} name={{this}}> {{this}} </option>
+                <option value={{this}}> {{this}} </option>
             {{/each}}
         </select>
     

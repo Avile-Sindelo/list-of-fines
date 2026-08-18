@@ -11,16 +11,22 @@ async function allFines(req, res){
 }
 
 async function specificFine(req, res) {
-    // extract the title from the request body
-    const { title } = req.body;
-    console.log('Request.Body: ', req.body);
+    try{
+        const keywords = extractKeywords(await FinesModel.getAllFines());
+        const title = req.body.option;
+        //get the fines for th specified title from the database
+        const fines = await FinesModel.getSpecificFines(title);
 
-    //get the fines for th specified title from the database
-    const titleFines = await FinesModel.getSpecificFines(title);
+        res.render('home', { fines, keywords })    
+    } catch(error) {
+        console.log(error); 
+    }
+    // extract the title from the request body
+    // const { title } = req.body;
+
     // console.log(titleFines);
     
     //render a view - home page
-    res.render('title-fines', { titleFines })    
 }
 
 function extractKeywords(fines){

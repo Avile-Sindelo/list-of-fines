@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Avile-Sindelo/list-of-fines#readme",
   "dependencies": {
+    "body-parser": "^2.3.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-handlebars": "^9.0.1",

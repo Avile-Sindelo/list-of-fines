@@ -8,7 +8,7 @@ async function getAllFines() {
 
 async function getSpecificFines(title) {
     const specificFines = await Database.any(`
-        SELECT * FROM fines WHERE title=$1
+        SELECT * FROM fines WHERE key_word=$1
         `, [title]);
 
         return specificFines;
