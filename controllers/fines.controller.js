@@ -21,12 +21,7 @@ async function specificFine(req, res) {
     } catch(error) {
         console.log(error); 
     }
-    // extract the title from the request body
-    // const { title } = req.body;
-
-    // console.log(titleFines);
     
-    //render a view - home page
 }
 
 function extractKeywords(fines){
