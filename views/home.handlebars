@@ -1,13 +1,13 @@
 <div class="container">
-    <form action="/filtered" method="POST">
-        <select name="option">
+    <form action="/filtered" method="POST" class="filter-form">
+        <select name="option" class="select-elem">
             <option disabled selected> Choose a title</option>
             {{#each keywords}}
                 <option value={{this}}> {{this}} </option>
             {{/each}}
         </select>
     
-        <button type="submit">Search</button>
+        <button type="submit" class="btn-submit">Search</button>
     </form>
 
     <table>
@@ -45,36 +45,26 @@
 
 <footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="footer-container">
 
-        <div>
-
-            <h3>
-
-                Developed by: A. Sindelo.
-
-            </h3>
-
-
-        </div>
-
-
-        <div>
+        <div id="contact-div">
 
             <h4> Contact </h4>
-
+            <hr>
             <p>📞 +27 69 449 6918</p>
 
             <p>📧 avilesindelo@gmail.com</p>
 
-            <p>📍 Mthatha, South Africa</p>
+            <p>📍 Mthatha, Eastern Cape, South Africa</p>
+            <hr>
 
+            <h3 id="developer"> Developed by: A. Sindelo. </h3>
         </div>
 
     </div>
 
     <div class="copyright"> 
-        © Enika Tech Solutions. All Rights Reserved. 
+        Enika Tech Solutions  ©  All Rights Reserved. 
     </div>
 
 </footer>
