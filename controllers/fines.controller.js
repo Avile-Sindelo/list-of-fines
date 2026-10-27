@@ -17,7 +17,7 @@ async function specificFine(req, res) {
         //get the fines for th specified title from the database
         const fines = await FinesModel.getSpecificFines(title);
 
-        res.render('home', { fines, keywords })    
+        res.render('home', { fines, keywords, title })    
     } catch(error) {
         console.log(error); 
     }

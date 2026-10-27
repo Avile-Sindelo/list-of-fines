@@ -1,7 +1,16 @@
 <div class="container">
+    {{#if title}}
+        <h2 class="title-heading">{{title}} offences</h2>
+    {{else}}
+        <h2 class="title-heading">All offences</h2>
+    {{/if}}
     <form action="/filtered" method="POST" class="filter-form">
         <select name="option" class="select-elem">
-            <option disabled selected> Choose a title</option>
+            {{#if title}}
+                <option selected> {{title}}</option>
+            {{else}}
+                <option disabled selected> Choose a title</option>
+            {{/if}}
             {{#each keywords}}
                 <option value={{this}}> {{this}} </option>
             {{/each}}
@@ -64,7 +73,7 @@
     </div>
 
     <div class="copyright"> 
-        Enika Tech Solutions  ©  All Rights Reserved. 
+        Enika Tech Solutions  ©  Copyright Reserved. 
     </div>
 
 </footer>
