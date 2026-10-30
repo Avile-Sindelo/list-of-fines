@@ -1,8 +1,8 @@
 <div class="container">
     {{#if title}}
-        <h2 class="title-heading">{{title}} offences</h2>
+        <h2 class="title-heading">Offences: {{title}} </h2>
     {{else}}
-        <h2 class="title-heading">All offences</h2>
+        <h2 class="title-heading">Offences: All </h2>
     {{/if}}
     <form action="/filtered" method="POST" class="filter-form">
         <select name="option" class="select-elem">
